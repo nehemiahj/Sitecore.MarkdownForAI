@@ -1,0 +1,52 @@
+{
+  "namespace": "MarkdownForAI",
+  "description": "Sitecore.MarkdownForAI items: _LlmsPage and _MarkdownRenderingParameters templates, the include/exclude options for the md droplist, and the Ask AI button (settings, AI assistants, rendering, ask-ai placeholder settings). Everything lives under Modules folders, outside the Helix Foundation/Feature/Project paths that solutions serialize themselves.",
+  "items": {
+    "path": "items",
+    "includes": [
+      {
+        "name": "templates-folder",
+        "path": "/sitecore/templates/Modules",
+        "scope": "SingleItem",
+        "allowedPushOperations": "createOnly"
+      },
+      {
+        "name": "templates",
+        "path": "/sitecore/templates/Modules/Markdown For AI",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "system",
+        "path": "/sitecore/system/Modules/Markdown For AI",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "rules": [
+          {
+            "path": "/Ask AI",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          }
+        ]
+      },
+      {
+        "name": "renderings",
+        "path": "/sitecore/layout/Renderings/Modules/Markdown For AI",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "placeholders-folder",
+        "path": "/sitecore/layout/Placeholder Settings/Modules",
+        "scope": "SingleItem",
+        "allowedPushOperations": "createOnly"
+      },
+      {
+        "name": "placeholders",
+        "path": "/sitecore/layout/Placeholder Settings/Modules/Markdown For AI",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+@*
+    "Ask AI" rendering (/sitecore/layout/Renderings/Modules/Markdown For AI/Ask AI).
+    Data source: an "Ask AI Settings" item; empty = /sitecore/system/Modules/Markdown For AI/Ask AI.
+    Rendering parameter "target": CSS selector of the article, used when the page has no Markdown URL.
+*@
+@using Sitecore.MarkdownForAI.Html
+@model Sitecore.Mvc.Presentation.RenderingModel
+@{
+    var rendering = Model.Rendering;
+    var settings = string.IsNullOrEmpty(rendering.DataSource) ? null : rendering.Item;
+}
+@Html.AskAi(settings, rendering.Parameters["target"])

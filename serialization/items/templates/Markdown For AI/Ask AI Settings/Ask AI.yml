@@ -1,0 +1,13 @@
+---
+ID: "5049ccea-c6ac-4ef2-a654-b8132c55f226"
+Parent: "05416c4c-c256-4363-82cb-2f08da29fabd"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Modules/Markdown For AI/Ask AI Settings/Ask AI
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261026T000000Z

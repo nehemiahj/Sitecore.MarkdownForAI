@@ -1,0 +1,13 @@
+---
+ID: "3eb425a2-18a0-45bc-90e3-eed5b66b9981"
+Parent: "3f742cd0-8726-4aff-9824-9aa295cad648"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Modules/Markdown For AI/AI Assistant/AI Assistant
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261026T000000Z

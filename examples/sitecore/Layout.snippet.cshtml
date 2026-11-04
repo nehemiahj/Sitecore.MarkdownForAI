@@ -1,0 +1,12 @@
+@* Snippets for an MVC layout or article view. *@
+@using Sitecore.MarkdownForAI.Html
+
+@* In <head>: lets agents and the web component find the Markdown version. *@
+@Html.MarkdownAlternateLink()
+
+@* Near the article title: the Ask AI button for human visitors (or add the "Ask AI" rendering).
+   Text and assistants come from /sitecore/system/Modules/Markdown For AI/Ask AI. *@
+@Html.AskAi(target: ".article-body")
+
+@* Anything that should never reach the Markdown, inside a component that otherwise should. *@
+<div class="share-buttons" data-md-ignore>...</div>

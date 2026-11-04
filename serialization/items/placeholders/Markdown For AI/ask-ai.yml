@@ -1,0 +1,25 @@
+---
+ID: "e1facd78-68d6-440b-a76b-c47ed8325106"
+Parent: "8f92462e-3840-4f58-b114-0d97a17c611e"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: /sitecore/layout/Placeholder Settings/Modules/Markdown For AI/ask-ai
+SharedFields:
+- ID: "14d0728a-82f9-4b01-ab16-1fe1577cede2"
+  Hint: Editable
+  Value: 1
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: ask-ai
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: |
+    {115E6CAE-CA7B-4AE8-97C0-59D4DACF1628}
+    {BB299BE4-6A32-4A44-85C2-DA51BDA760B6}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261026T000000Z

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chronic Kidney Disease in Cats</title>
+  <!--
+    Demo of <ask-ai> without a server-side .md URL: the component converts the
+    <article> HTML in the browser. Serve this folder over HTTP from the repo root, e.g.
+      npx http-server .   then open http://localhost:8080/examples/demo.html
+    To try the .md path, add: <link rel="alternate" type="text/markdown" href="articles/feline-chronic-kidney-disease.md">
+  -->
+  <style>
+    :root { --bg: #faf9f5; --fg: #1f1e1d; --muted: #6b6a65; --line: #e3e1da; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #1f1e1d; --fg: #f5f4ef; --muted: #a8a7a1; --line: #3a3935; } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, sans-serif; }
+    header, footer { padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    footer { border-top: 1px solid var(--line); border-bottom: 0; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px; }
+    .toolbar { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+    table { border-collapse: collapse; width: 100%; font-size: 15px; }
+    th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+    .callout { border-left: 4px solid #c0392b; padding: 8px 14px; background: rgba(192, 57, 43, .08); }
+    .share { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>Site header and navigation (not part of the article)</header>
+
+  <main class="wrap">
+    <div class="toolbar"><ask-ai target="article" theme="auto"></ask-ai></div>
+
+    <article>
+      <h1>Chronic Kidney Disease in Cats</h1>
+      <p><strong>In short:</strong> chronic kidney disease (CKD) is a slow loss of kidney function that is <strong>common in older cats</strong>. Diet, hydration and regular check-ups help many cats live comfortably for years.</p>
+      <p class="share" data-md-ignore>Share: Facebook · Email · Print</p>
+
+      <h2>Signs to watch for</h2>
+      <ul>
+        <li><strong>Drinking more</strong> than usual</li>
+        <li><strong>Peeing more</strong>, with bigger clumps in the litter box</li>
+        <li><strong>Weight loss</strong> and a dull coat</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Emergency:</strong> go to a vet now if your cat may have touched any part of a <strong>lily</strong> or licked <strong>antifreeze</strong>.</p>
+      </div>
+
+      <h2>IRIS stages</h2>
+      <table>
+        <thead><tr><th>Stage</th><th>Creatinine (mg/dL)</th><th>SDMA (µg/dL)</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Under 1.6</td><td>Under 18</td></tr>
+          <tr><td>2</td><td>1.6 to 2.8</td><td>18 to 25</td></tr>
+          <tr><td>3</td><td>2.9 to 5.0</td><td>26 to 38</td></tr>
+          <tr><td>4</td><td>Over 5.0</td><td>Over 38</td></tr>
+        </tbody>
+      </table>
+
+      <p><em>Example content. It must be reviewed by a veterinarian before publication.</em></p>
+    </article>
+  </main>
+
+  <footer>Site footer (not part of the article)</footer>
+
+  <script type="module">
+    import '../js/ask-ai/src/ask-ai.js';
+    document.addEventListener('askai:action', (e) => console.log('askai:action', e.detail));
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+---
+ID: "171ec3d1-33ae-4245-ba24-91b898053f77"
+Parent: "3f742cd0-8726-4aff-9824-9aa295cad648"
+Template: "3f742cd0-8726-4aff-9824-9aa295cad648"
+Path: /sitecore/templates/Modules/Markdown For AI/AI Assistant/__Standard Values
+SharedFields:
+- ID: "7bb82944-76fa-4250-8ea7-1f9b88f898d3"
+  Hint: Enabled
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261026T000000Z

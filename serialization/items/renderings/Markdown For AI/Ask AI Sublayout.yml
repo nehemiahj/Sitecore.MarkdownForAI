@@ -1,0 +1,29 @@
+---
+ID: "bb299be4-6a32-4a44-85c2-da51bda760b6"
+Parent: "2e5c51d2-250a-450d-b292-d9c5c0276811"
+Template: "0a98e368-cdb9-4e1e-927c-8e0c24a003fb"
+Path: /sitecore/layout/Renderings/Modules/Markdown For AI/Ask AI Sublayout
+SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Modules/Markdown For AI/Ask AI Settings
+- ID: "ad6a7db0-c741-4509-a5eb-fa582642e960"
+  Hint: Parameters
+  Value: md=exclude
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: /sitecore/system/Modules/Markdown For AI
+- ID: "e42081b6-8a95-4a11-89ce-df70ed502f57"
+  Hint: Path
+  Value: /layouts/MarkdownForAI/AskAi.ascx
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261026T000000Z
+    - ID: "7c51dbf3-2303-44b9-a3cb-6e24967a6284"
+      Hint: Description
+      Value: Ask AI button for WebForms pages. Leave the data source empty to use /sitecore/system/Modules/Markdown For AI/Ask AI.
