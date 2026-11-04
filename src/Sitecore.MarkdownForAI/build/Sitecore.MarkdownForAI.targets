@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Imported automatically into the project that references the Sitecore.MarkdownForAI NuGet package.
+
+  1. Publishes the module's files with the project, at the same paths in the web root:
+       App_Config/Modules/MarkdownForAI/Sitecore.MarkdownForAI.config
+       Views/MarkdownForAI/AskAi.cshtml
+       scripts/markdownforai/ask-ai.js
+     They come from the package, so they stay out of your source tree and change with the package
+     version. Set MarkdownForAIPublishFiles to false to deploy them yourself.
+
+  2. On the first build, copies z.MarkdownForAI.Site.config.example into
+     App_Config/Include/MarkdownForAI/ in your project, if that folder does not exist yet. Rename it to
+     z.MarkdownForAI.Site.config, set your sites and placeholders, and add it to the project like any
+     other config file. Set MarkdownForAICopySiteConfig to false to skip this.
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MarkdownForAIFilesRoot>$(MSBuildThisFileDirectory)..\sitecore\</MarkdownForAIFilesRoot>
+    <MarkdownForAIPublishFiles Condition="'$(MarkdownForAIPublishFiles)' == ''">true</MarkdownForAIPublishFiles>
+    <MarkdownForAICopySiteConfig Condition="'$(MarkdownForAICopySiteConfig)' == ''">true</MarkdownForAICopySiteConfig>
+    <MarkdownForAISiteConfigFolder>$(MSBuildProjectDirectory)\App_Config\Include\MarkdownForAI\</MarkdownForAISiteConfigFolder>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(MarkdownForAIPublishFiles)' == 'true'">
+    <Content Include="$(MarkdownForAIFilesRoot)**\*" Exclude="$(MarkdownForAIFilesRoot)**\*.example">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Visible>false</Visible>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <Target Name="MarkdownForAICopySiteConfig" BeforeTargets="Build"
+          Condition="'$(MarkdownForAICopySiteConfig)' == 'true' and !Exists('$(MarkdownForAISiteConfigFolder)')">
+    <Copy SourceFiles="$(MarkdownForAIFilesRoot)App_Config\Include\MarkdownForAI\z.MarkdownForAI.Site.config.example"
+          DestinationFolder="$(MarkdownForAISiteConfigFolder)" />
+    <Message Importance="high"
+             Text="Sitecore.MarkdownForAI: created App_Config\Include\MarkdownForAI\z.MarkdownForAI.Site.config.example. Rename it to .config, set your sites, and add it to the project." />
+  </Target>
+</Project>

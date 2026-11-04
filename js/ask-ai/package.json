@@ -1,0 +1,29 @@
+{
+  "name": "ask-ai-button",
+  "version": "0.1.0",
+  "description": "Web component that lets readers ask ChatGPT, Claude or any other AI assistant about the current article, with copy and view-as-Markdown actions.",
+  "type": "module",
+  "main": "src/ask-ai.js",
+  "exports": {
+    ".": "./src/ask-ai.js"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.js\""
+  },
+  "keywords": [
+    "ai",
+    "chatgpt",
+    "claude",
+    "markdown",
+    "llm",
+    "web-component"
+  ],
+  "author": "Nehemiah Jeyakumar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

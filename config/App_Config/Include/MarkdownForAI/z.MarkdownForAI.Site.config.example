@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Sitecore.MarkdownForAI: YOUR settings.
+
+  Rename this file to z.MarkdownForAI.Site.config (drop ".example") and change the values below.
+  Keep your changes here, not in App_Config/Modules/MarkdownForAI/Sitecore.MarkdownForAI.config:
+  upgrades replace that file and leave this one alone.
+
+  Every setting in Sitecore.MarkdownForAI.config can be changed here the same way
+  (set:value). Check the result in /sitecore/admin/showconfig.aspx.
+-->
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:set="http://www.sitecore.net/xmlconfig/set/">
+  <sitecore>
+    <settings>
+      <!-- Sites that answer /page.md (names from <sites>), pipe separated. "*" = every site
+           except Sitecore system sites. -->
+      <setting name="MarkdownForAI.Sites" set:value="website" />
+
+      <!-- Placeholders whose renderings never appear in the Markdown, at any depth: usually the header,
+           navigation and footer placeholders of your layouts. -->
+      <setting name="MarkdownForAI.ExcludedPlaceholders" set:value="header|footer|navigation|nav|breadcrumb" />
+    </settings>
+  </sitecore>
+</configuration>

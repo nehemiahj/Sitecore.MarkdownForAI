@@ -1,0 +1,26 @@
+---
+ID: "115e6cae-ca7b-4ae8-97c0-59d4dacf1628"
+Parent: "2e5c51d2-250a-450d-b292-d9c5c0276811"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/Modules/Markdown For AI/Ask AI
+SharedFields:
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Modules/Markdown For AI/Ask AI Settings
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: /Views/MarkdownForAI/AskAi.cshtml
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: /sitecore/system/Modules/Markdown For AI
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261026T000000Z
+    - ID: "2f9eba13-2283-4c8b-b060-5ce622de0a9a"
+      Hint: Description
+      Value: Button that lets readers ask an AI assistant about the page. Leave the data source empty to use /sitecore/system/Modules/Markdown For AI/Ask AI.

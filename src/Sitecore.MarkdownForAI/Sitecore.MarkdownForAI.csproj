@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Sitecore 10.1 to 10.5 (MVC). Compiled against the 10.1 assemblies, the oldest supported release.
+    Sitecore and ASP.NET MVC references are compile-time only; the site supplies them at runtime.
+    Sitecore 8.0 to 10.0: see the Sitecore.MarkdownForAI.Legacy repository.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>Sitecore.MarkdownForAI</RootNamespace>
+    <AssemblyName>Sitecore.MarkdownForAI</AssemblyName>
+    <Version>0.1.0</Version>
+    <Authors>Nehemiah Jeyakumar</Authors>
+    <Description>Ask AI button for Sitecore MVC pages: visitors open the page in ChatGPT, Claude, Perplexity or any assistant you add, which reads a clean Markdown version of the page (/page.md). Sitecore 10.1 to 10.5. The package also publishes the module config, Ask AI view and script with your web project; items come from the Sitecore package or the CLI serialization.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>sitecore;mvc;markdown;ai;chatgpt;claude</PackageTags>
+    <PackageProjectUrl>https://github.com/nehemiahj/Sitecore.MarkdownForAI</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nehemiahj/Sitecore.MarkdownForAI</RepositoryUrl>
+    <PackageReadmeFile>PACKAGE.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS0618</NoWarn>
+    <SitecoreVersion>10.1.0</SitecoreVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sitecore.Kernel" Version="$(SitecoreVersion)" PrivateAssets="all" ExcludeAssets="runtime" />
+    <PackageReference Include="Sitecore.Mvc" Version="$(SitecoreVersion)" PrivateAssets="all" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.4" PrivateAssets="all" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
+  <!-- NuGet package: the assembly, plus the module's web root files under sitecore\ and a .targets file
+       that publishes them with the referencing project (see build\Sitecore.MarkdownForAI.targets). -->
+  <ItemGroup>
+    <None Update="PACKAGE.md" Pack="true" PackagePath="\" />
+    <None Update="build\Sitecore.MarkdownForAI.targets" Pack="true" PackagePath="build\Sitecore.MarkdownForAI.targets" />
+    <None Include="..\..\config\App_Config\**\*" Pack="true" PackagePath="sitecore\App_Config\" Visible="false" />
+    <None Include="..\..\views\**\*" Pack="true" PackagePath="sitecore\Views\" Visible="false" />
+    <None Include="..\..\js\ask-ai\src\*.js" Pack="true" PackagePath="sitecore\scripts\markdownforai\" Visible="false" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+---
+ID: "49593228-8710-41a4-bd89-fc4b85d8cb0c"
+Parent: "e9f3fd1e-dea0-41c6-817a-b84ce1917ec4"
+Template: "05416c4c-c256-4363-82cb-2f08da29fabd"
+Path: /sitecore/system/Modules/Markdown For AI/Ask AI
+SharedFields:
+- ID: "afeea023-8362-4047-b50a-6f6f9ea3624a"
+  Hint: Show View Markdown
+  Value: 1
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "bffca1d8-eed0-43e6-8140-42411269113e"
+  Hint: Max Link Length
+  Value: 6000
+- ID: "f229f1ac-1dc3-4f7d-893d-60ad105d4d85"
+  Hint: Show Copy Markdown
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261026T000000Z
+    - ID: "4448b534-31e0-4a6b-af6f-85bfbb133092"
+      Hint: Prompt
+      Value: "Read this page so I can ask you questions about it: {url}"
+    - ID: "8bba6b27-0439-491a-988e-0a2b70f68b1c"
+      Hint: Button Label
+      Value: Ask AI about this page
